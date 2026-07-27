@@ -59,11 +59,14 @@ class VolatileFactsTests(unittest.TestCase):
 
         text = LEDGER.read_text(encoding="utf-8")
         required = (
-            "`verified_at`: 2026-07-10",
-            "`expires_at`: 2026-08-09",
+            "`verified_at`: 2026-07-26",
+            "`expires_at`: 2026-08-25",
             "`ttl_days`: 30",
             "status=resolved-conflict",
+            "`claude-opus-5`",
             "`claude-sonnet-5`",
+            "thinking 默认开启",
+            "Legacy models",
             "Fable 5 已于 2026-07-01 恢复全球访问",
             "Mythos 5 非普遍可用",
             "Project Glasswing 获批客户",
@@ -77,7 +80,7 @@ class VolatileFactsTests(unittest.TestCase):
         )
         for marker in required:
             self.assertIn(marker, text)
-        self.assertEqual(rules.check_volatile_facts(LEDGER, date(2026, 7, 10)), [])
+        self.assertEqual(rules.check_volatile_facts(LEDGER, date(2026, 7, 26)), [])
 
     def test_current_mythos_guidance_uses_catalog_contract_not_event_geography(self):
         current_snapshots = (

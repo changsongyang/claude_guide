@@ -7,8 +7,8 @@
 #### 当前能力与兼容性基线
 
 **已确认能力方向**
-- Claude Sonnet 5、Claude Fable 5 和 Claude Opus 4.8 延续了 Anthropic 在长上下文、复杂推理和 Agent 工作流上的优势。
-- Claude Sonnet 5 是当前通用主力模型；Sonnet 4.6 仅作为既有系统迁移、回归对比和回退基线。Claude Opus 4.8（Opus 档旗舰，2026-05 发布；上一代为 Opus 4.7）适合极度复杂的软件工程和推理任务，Claude Opus 4.6 提供成本与能力的平衡。
+- Claude Opus 5、Claude Sonnet 5 和 Claude Fable 5 延续了 Anthropic 在长上下文、复杂推理和 Agent 工作流上的优势。
+- Claude Sonnet 5 是当前通用主力模型；Sonnet 4.6 仅作为既有系统迁移、回归对比和回退基线。Claude Opus 5（Opus 档当前型号，2026-07-24 发布；Opus 4.8/4.7/4.6 已转入 Legacy models）适合极度复杂的软件工程和推理任务，需要更高能力上限时再评估 Fable 5。
 - Prompt Caching、Batch API、Claude Code、MCP 等能力共同强化了工程落地与成本控制路径。
 
 #### 三层+旗舰模型梯队
@@ -17,7 +17,7 @@
 |-----|------|------|--------|
 | Claude Haiku 4.5 | 轻量快速 | $1.00/$5.00 | 实时、大量 |
 | Claude Sonnet 5 | 通用主力 | 介绍价 $2.00/$10.00 | 通用、平衡；2026-08-31 后标准价 $3/$15 |
-| Claude Opus 4.8 | Opus 档旗舰 | $5.00/$25.00 | 极高难度工程、深层推理 |
+| Claude Opus 5 | Opus 档当前型号 | $5.00/$25.00 | 极高难度工程、深层推理 |
 | Claude Fable 5 | 2026-07-01 恢复全球访问 | $10.00/$50.00 | 分类器拒绝与回退需单独测试 |
 | Claude Sonnet 4.6 | 迁移兼容与回退基线 | $3.00/$15.00 | 不用于新项目默认值 |
 
@@ -163,7 +163,7 @@ RAG（检索增强生成）是上下文工程的实践工具：
 | 推理 | 复杂推理与规划能力继续增强 | 是否进一步提升可控 thinking 与长任务稳定性 |
 | 编程 | Sonnet/Opus 在编码与 Agent 工作流上表现强 | 是否扩大代码库级任务优势 |
 | 多模态 | 视觉与工具工作流结合更深 | 是否出现更强的原生音视频与实时交互能力 |
-| 上下文 | Sonnet 5、Opus 4.8、Opus 4.7 和 Opus 4.6 已进入 1M token 公开规格；Sonnet 4.6 为迁移兼容基线 | 是否在 1M 之上继续扩展或改进利用效率 |
+| 上下文 | Opus 5、Sonnet 5、Opus 4.8、Opus 4.7 和 Opus 4.6 已进入 1M token 公开规格；Sonnet 4.6 为迁移兼容基线 | 是否在 1M 之上继续扩展或改进利用效率 |
 
 ### 成本参考
 
@@ -172,9 +172,9 @@ RAG（检索增强生成）是上下文工程的实践工具：
 | Claude Haiku 4.5 | $1.00/M | $5.00/M | $1.25/M | $0.10/M |
 | Claude Sonnet 5（介绍价） | $2.00/M | $10.00/M | $2.50/M | $0.20/M |
 | Claude Sonnet 4.6（兼容性基线） | $3.00/M | $15.00/M | $3.75/M | $0.30/M |
-| Claude Opus 4.8 | $5.00/M | $25.00/M | $6.25/M | $0.50/M |
+| Claude Opus 5 | $5.00/M | $25.00/M | $6.25/M | $0.50/M |
 
-> 注：Opus 4.8 为当前 Opus 线旗舰。Fable 5 已恢复全球访问；Sonnet 5 是 Sonnet 4.6 的迁移目标和新项目默认评测起点。Sonnet 5 介绍价至 2026-08-31，之后恢复 $3/$15 标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
+> 注：Opus 5（2026-07-24 发布）为当前 Opus 线型号，Opus 4.8/4.7/4.6 已转入官方 Legacy models 分组。Fable 5 已恢复全球访问；Sonnet 5 是 Sonnet 4.6 的迁移目标和新项目默认评测起点。Sonnet 5 介绍价至 2026-08-31，之后恢复 $3/$15 标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
 
 ### 长对话管理成本对比
 

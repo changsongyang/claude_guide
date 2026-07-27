@@ -52,12 +52,12 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (75, 97, 99, 101, 109, 174),
+        (75, 105, 107, 109, 117, 183),
         "Historical model-family evolution and the 4.5-to-4.6 comparison.",
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (95, 152),
+        (95, 161),
         "Sonnet 5 migration target and legacy thinking compatibility reference.",
     ),
     **_sonnet_46_entries(
@@ -92,7 +92,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "03_tools/3.5_programmatic.md",
-        (17, 21),
+        (17, 22),
         "Model table marks Sonnet 5 as the target and 4.6 as legacy-only.",
     ),
     **_sonnet_46_entries(
@@ -102,7 +102,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "08_agent/8.4_extended_thinking.md",
-        (12, 37, 50),
+        (12, 37, 52),
         "Legacy thinking syntax retained only for migration compatibility.",
     ),
     **_sonnet_46_entries(
@@ -147,7 +147,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.1_claude5_preview.md",
-        (17, 52, 55, 57, 67, 89),
+        (17, 53, 56, 58, 68, 91),
         "Explicit Sonnet 5 migration checklist and legacy compatibility reference.",
     ),
     **_sonnet_46_entries(
