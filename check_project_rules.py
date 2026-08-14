@@ -106,6 +106,11 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
         "Legacy thinking syntax retained only for migration compatibility.",
     ),
     **_sonnet_46_entries(
+        "08_agent/8.4_extended_thinking.md",
+        (156,),
+        "Official effort-level availability: `max` reaches back to the 4.6 generation while `xhigh` does not.",
+    ),
+    **_sonnet_46_entries(
         "08_agent/summary.md",
         (9,),
         "Summary explicitly routes new work to Sonnet 5 and legacy work through migration.",
