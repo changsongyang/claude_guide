@@ -12,11 +12,11 @@ MCP (Model Context Protocol) 标志着 AI 应用开发进入了一个标准化�
 
 #### 架构三支柱
 
-*   **Resources (资源)**：被动的数据源，供模型“阅读” (Read Context)。
+*   **Resources（资源）**：被动的数据源，供模型“阅读” (Read Context)。
     *   *例：文件内容、数据库表 Schema、日志流。*
-*   **Tools (工具)**：主动的操作，供模型“执行” (Take Action)。
+*   **Tools（工具）**：主动的操作，供模型“执行” (Take Action)。
     *   *例：提交代码、发送消息、重启服务。*
-*   **Prompts (提示)**：预设的模版，供模型“调用” (Access Expertise)。
+*   **Prompts（提示）**：预设的模版，供模型“调用” (Access Expertise)。
     *   *例：服务器自带的分析专家模版。*
 
 #### 实战配置

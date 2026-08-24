@@ -25,8 +25,8 @@
 
 #### 引导与控制技术
 
-*   **Few-Shot (举栗子)**：让 AI 模仿格式和风格，无需长篇大论。
-*   **Chain of Thought (列算式)**：用 `<thinking>` 强迫 AI 慢下来思考，解决复杂逻辑。
+*   **Few-Shot（举栗子）**：让 AI 模仿格式和风格，无需长篇大论。
+*   **Chain of Thought（列算式）**：用 `<thinking>` 强迫 AI 慢下来思考，解决复杂逻辑。
 *   **Structured Outputs**：新模型优先用 API 级结构约束输出格式；Prefill 只适用于仍支持该能力的旧模型。
 
 #### 工程化迭代
