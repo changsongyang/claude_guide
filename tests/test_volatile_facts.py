@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import tempfile
 import unittest
 from datetime import date
@@ -58,10 +59,15 @@ class VolatileFactsTests(unittest.TestCase):
             self.assertEqual(rules.check_volatile_facts(path, date(2026, 7, 10)), [])
 
         text = LEDGER.read_text(encoding="utf-8")
+        # Deliberately not pinning the two header dates to literals: doing so made
+        # every legitimate ledger refresh fail here. Assert the header *shape*, and
+        # let check_volatile_facts() below own the date arithmetic.
+        self.assertRegex(
+            text,
+            r"`verified_at`: \d{4}-\d{2}-\d{2} · `expires_at`: \d{4}-\d{2}-\d{2} · `ttl_days`: 30",
+            "ledger header must carry a verified_at · expires_at · ttl_days: 30 triple",
+        )
         required = (
-            "`verified_at`: 2026-07-26",
-            "`expires_at`: 2026-08-25",
-            "`ttl_days`: 30",
             "status=resolved-conflict",
             "`claude-opus-5`",
             "`claude-sonnet-5`",
@@ -80,7 +86,11 @@ class VolatileFactsTests(unittest.TestCase):
         )
         for marker in required:
             self.assertIn(marker, text)
-        self.assertEqual(rules.check_volatile_facts(LEDGER, date(2026, 7, 26)), [])
+        stamped = re.search(r"`verified_at`:\s*(\d{4})-(\d{2})-(\d{2})", text)
+        self.assertIsNotNone(stamped, "ledger header must carry verified_at")
+        self.assertEqual(
+            rules.check_volatile_facts(LEDGER, date(*(int(g) for g in stamped.groups()))), []
+        )
 
     def test_current_mythos_guidance_uses_catalog_contract_not_event_geography(self):
         current_snapshots = (
@@ -126,7 +136,7 @@ class VolatileFactsTests(unittest.TestCase):
                 "Claude Sonnet 5",
                 "$2.00",
                 "$10.00",
-                "2026-08-31",
+                "官方已取消原定 2026-09-01 上调至 $3/$15 的计划",
                 "2026-07-01 恢复全球访问",
             ),
             "01_intro/1.2_model_family.md": (
@@ -159,7 +169,7 @@ class VolatileFactsTests(unittest.TestCase):
         for marker in (
             "新项目首评：Claude Sonnet 5",
             "既有 Sonnet 4.6",
-            "2026-08-31",
+            "官方已取消原定 2026-09-01 上调至 $3/$15 的计划",
             "约增加 30% token",
             '| **Claude Sonnet 5** | ~$3.6 |',
             'MODEL_BALANCED = "claude-sonnet-5"',

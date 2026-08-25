@@ -46,6 +46,26 @@ def _sonnet_46_entries(
 
 SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     **_sonnet_46_entries(
+        "01_intro/1.2_model_family.md",
+        (150,),
+        "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
+    ),
+    **_sonnet_46_entries(
+        "01_intro/1.4_model_selection.md",
+        (80,),
+        "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
+    ),
+    **_sonnet_46_entries(
+        "12_appendix/12.5_pricing.md",
+        (24,),
+        "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
+    ),
+    **_sonnet_46_entries(
+        "13_advanced/summary.md",
+        (19,),
+        "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
+    ),
+    **_sonnet_46_entries(
         "01_intro/1.1_born.md",
         (76,),
         "Historical release timeline entry for the February 2026 launch.",
@@ -137,12 +157,12 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "12_appendix/12.6_model_comparison.md",
-        (34, 54, 68, 70, 89, 109, 140, 153, 163, 172, 197, 211, 434, 633, 640, 661, 817, 823),
+        (34, 54, 68, 70, 89, 109, 140, 153, 163, 172, 197, 211, 434, 632, 639, 660, 816, 822),
         "Historical comparison snapshot; the chapter notice forbids production routing from it.",
     ),
     **_sonnet_46_entries(
         "12_appendix/12.6_model_comparison.md",
-        (9, 315, 327, 402, 432, 448, 545, 826, 831, 837),
+        (9, 315, 327, 402, 432, 448, 544, 825, 830, 836),
         "Explicit Sonnet 5 migration, token recount, legacy baseline, or rollback guidance.",
     ),
     **_sonnet_46_entries(
@@ -157,7 +177,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.2_infinite_chats.md",
-        (956,),
+        (955,),
         "Legacy model retained only as a context-window compatibility baseline.",
     ),
     **_sonnet_46_entries(
