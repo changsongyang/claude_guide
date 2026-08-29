@@ -36,4 +36,4 @@ Computer Use 是 Claude 最具突破性的能力，让 AI 能够像人类一样�
 
 ---
 
-> ⚠️ **安全警告**：Computer Use 仍处于公测阶段，务必在沙箱环境中运行，不要让 Claude 访问敏感账户或数据。
+> ⚠️ **安全警告**：Computer Use 会真实操作 GUI 和浏览器，务必在沙箱环境中运行，不要让 Claude 访问敏感账户或数据。

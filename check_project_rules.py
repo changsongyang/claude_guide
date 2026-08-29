@@ -121,6 +121,11 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
         "Legacy Computer Use tool-version compatibility baseline.",
     ),
     **_sonnet_46_entries(
+        "05_computer_use/5.3_env.md",
+        (42,),
+        "Legacy Computer Use tool-version compatibility baseline.",
+    ),
+    **_sonnet_46_entries(
         "08_agent/8.4_extended_thinking.md",
         (12, 37, 52),
         "Legacy thinking syntax retained only for migration compatibility.",
